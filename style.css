@@ -135,9 +135,15 @@ figcaption{
     right: 0;
 }
 
-.texture-paper::before {
+.texture-paper::before{
     background: url("img/texture-paper.png");
     background-size: 280px 280px;
+}
+
+.texture-paperz{
+    background: url("img/texture-paper.png");
+    background-size: 280px 280px;
+    padding: 100px 0px 100px 0px;
 }
 
 .b-parallax {
@@ -839,7 +845,7 @@ h4 {
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background: #ffb08b;
     color: #FFFFFF!important;
 }
 
