@@ -5,14 +5,18 @@
     <meta name="description" content="La Chouette Agence est une entreprise de webdesign basée à Lyon. Elle aide les entreprises à améliorer leur visibilité et leur attractivité sur internet. Elle réalise des site web pour une large variété de profils. N'hésitez pas à prendre contact avec nous dès maintenant pour votre projet de webdesign pour votre entreprise.">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	
-    <link rel="shortcut icon" type="image/png" href="favicon_resize.png">
+	<link rel="shortcut icon" type="image/png" href="favicon_resize.png">
+	
 	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="./css/et-line.css">
 
+	<script src="./js/jquery-2.1.0.js" defer></script>
 	<script src="./js/bootstrap.js"></script>
+	<script src="./js/blocs.js" defer></script>
 	<script src="./js/jquery.touchSwipe.js" defer></script>
+	<script src="./js/gmaps.js" defer></script>
 
     <title>La Chouette Agence - Entreprise de Webdesign à Lyon</title>
 
@@ -27,8 +31,8 @@
   gtag('config', 'G-ZDRM48XW0B');
 </script>
 <!-- Analytics END -->
-    
 </head>
+
 <body>
 <!-- Principal conteneur -->
 <div class="page-container">
@@ -39,22 +43,15 @@
 
 		<nav class="navbar row">
 			<div class="navbar-header">
-				<div class="keywords" style="color:#cccccc;font-size:1px;">Agence web à paris, stratégie web, web design, illustrations, design de site web, site web, web, internet, site internet, site</div>
-				<a class="navbar-brand" href="index.html"><img src="img/la-chouette-agence.png" alt="paris web design logo agence web meilleure agence" height="40" /></a>
-				<div class="keywords" style="color:#cccccc;font-size:1px;">Agence web à paris, stratégie web, web design, illustrations, design de site web, site web, web, internet, site internet, site</div>
-				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
-					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-				</button>
+				<img src="img/la-chouette-agence_resize.png" alt="Logo La Chouette Agence Webdesign Lyon" height="40"/>
 			</div>
 			<div class="collapse navbar-collapse navbar-1 special-dropdown-nav">
 				<ul class="site-navigation nav navbar-nav">
-					<li>
-						<a href="index.html">Accueil</a>
+					<li class="focused disabled padding15" aria-label="page active">
+						Accueil
 					</li>
-					<li>
-					</li>
-					<li>
-						<a href="page2.html">page2 &gt;</a>
+					<li class="focused">
+						<a href="page2.html">Contact</a>
 					</li>
 				</ul>
 			</div>
@@ -68,8 +65,8 @@
 	<div class="container bloc-lg">
 		<div class="row tight-width-whitespace">
 			<div class="col-sm-12">
-				<img src="img/logo.png" class="center-block image-resize-mode" width="100" alt="La chouette agence, agence web paris, création logo paris" />
-				<h1 class="text-center hero-bloc-text tc-white ">
+				<img src="img/logo_resize.png" class="center-block image-resize-mode" width="100" alt="La chouette agence, agence web paris, création logo paris" />
+				<h1 class="text-center hero-bloc-text tc-white">
 					La chouette agence.
 				</h1>
 				<div class="text-center">
@@ -85,9 +82,10 @@
 <div class="bloc bgc-white l-bloc" id="bloc-2-services">
 	<div class="container bloc-md">
 		<div class="row">
-			<div class="col-sm-12 text-center">
-				<img alt="agence web, agence web paris, web design paris, stratégie web" src="img/title.png" />
-			</div>
+			<h2 class="col-sm-12 text-center">
+				La Chouette Agence est une agence de webdesign qui aide
+				<br>les entreprises à devenir attractives et visibles sur internet.
+			</h2>
 		</div>
 		<div class="row voffset-lg med-width-whitespace">
 			<div class="col-sm-4">
@@ -97,8 +95,8 @@
 				<h3 class="mg-md text-center">
 					Web design
 				</h3>
-				<p class="text-center ">
-					Que vous ayez un site web qui a besoin d&rsquo;un rafraîchissement ou que vous partiez de zéro, laissez-nous vous réaliser un design dont vous serez fier.
+				<p>
+					Que vous ayez un site web qui a besoin d'un rafraîchissement ou que vous partiez de zéro, laissez-nous vous réaliser un design dont vous serez fier.
 				</p>
 			</div>
 			<div class="col-sm-4">
@@ -106,9 +104,9 @@
 					<span class="et-icon-presentation sm-shadow icon-dark-slate-blue icons icon-lg"></span>
 				</div>
 				<h3 class="mg-md text-center">
-					&nbsp;Stratégie
+					Stratégie
 				</h3>
-				<p class="text-center ">
+				<p>
 					Plutôt que de suggérer des designs à la mode, nous travaillerons avec vous pour comprendre vos objectifs commerciaux afin de vous proposer le meilleur design possible.<br>
 				</p>
 			</div>
@@ -119,17 +117,17 @@
 				<h3 class="mg-md text-center">
 					Illustrations
 				</h3>
-				<p class="text-center ">
+				<p>
 					Un bon design n'est rien sans de bonnes illustrations. Laissez faire notre équipe de graphistes talentueux pour donner à vos pages une touche finale d'élégance.
 				</p>
 			</div>
 		</div>
-		<div class="row voffset-lg voffset">
-			<div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
-				<img alt="agence web, agence web paris, web design paris, stratégie web" src="img/citation.png" />
-
-			</div>
-		</div>
+		<figure class="row voffset-lg voffset quote">
+			<blockquote>
+				"La Chouette Agence est une excellente agence de webdesign ! Les webdesigners ont réussi à capturer l'essence de notre entreprise et à l'intégrer à notre site. Cela nous a aidé à doubler nos ventes en ligne à Lyon."
+			</blockquote>
+			<figcaption>- Maxime Guillard, PDG de À vos fourchettes.</figcaption>
+		</figure>
 	</div>
 </div>
 <!-- bloc-2-services END -->
@@ -137,13 +135,13 @@
 <!-- bloc-3-what-i-do -->
 <div class="bloc tc-white bgc-atomic-tangerine bg-presentation d-bloc bloc-bg-texture texture-paper b-parallax" id="bloc-3-what-i-do">
 	<div class="container bloc-lg">
-		<div class="row tight-width-whitespace black-background">
+		<div class="row tight-width-whitespace black-background shadow-custom">
 			<div class="col-sm-12">
-				<h2 class="mg-md text-center tc-white">
+				<h2 class="mg-md text-center tc-white" id="orangeh2">
 					Nous souhaitons aider les entreprises de la région Lyonnaise à se développer et à connaître le succès. Nous travaillons pour aider les entreprises locales à attirer de nouveaux clients .<br>
 				</h2>
 				<p class="text-center white">
-					Nous aimons collaborer avec des entrepreneurs créatifs et des entreprises locale, qu’elles aient besoin de créer un site de A à Z ou de donner un coup de jeune à leur site. Que vous ayez besoin d’une identité visuelle complète ou d’une refonte de votre site, n’hésitez pas à nous contacter. Nous travaillerons ensemble pour créer des sites beau et bien structurés, qui seront facilement trouvable sur les moteurs de recherche. <br><br><a class="ltc-white bold-link" href="page2.html">Contactez notre équipe</a><br>
+					Nous aimons collaborer avec des entrepreneurs créatifs et des entreprises locale, qu’elles aient besoin de créer un site de A à Z ou de donner un coup de jeune à leur site. Que vous ayez besoin d’une identité visuelle complète ou d’une refonte de votre site, n’hésitez pas à nous contacter. Nous travaillerons ensemble pour créer des sites beau et bien structurés, qui seront facilement trouvable sur les moteurs de recherche.
 				</p>
 			</div>
 		</div>
@@ -155,13 +153,14 @@
 <div class="bloc bgc-white bg-lines-h2-bg bg-repeat l-bloc" id="bloc-4-portfolio">
 	<div class="container bloc-lg">
 		<div class="row">
-			<div class="col-sm-12 text-center">
-				<img alt="agence web, agence web paris, web design paris, stratégie web" src="img/title2.png" />
-			</div>
+			<h2 class="col-sm-12 text-center">
+				Nous travaillons avec beaucoup de clients,
+				<br>voici nos réalisations.
+			</h2>
 		</div>
 		<div class="row tight-width-whitespace portfolio-row">
 			<div class="col-sm-6">
-				<a href="#" data-lightbox="img/1.jpg" data-gallery-id="gallery-1" data-caption="Refonte d'un site web pour un journal local" data-frame="snapshot-lb"><img src="img/1.jpg" alt="paris web design logo agence web meilleure agence et refonte site web journal" class="img-responsive portfolio-thumb" /></a>
+				<a href="#" data-lightbox="img/1_resize.jpg" data-gallery-id="gallery-1" data-caption="Refonte d'un site web pour un journal local" data-frame="snapshot-lb"><img src="img/1_resize.jpg" alt="paris web design logo agence web meilleure agence et refonte site web journal" class="img-responsive portfolio-thumb" /></a>
 				<h3 class="mg-md text-center">
 					Refonte d'un site web pour un journal local
 				</h3>
@@ -170,7 +169,7 @@
 				</p>
 			</div>
 			<div class="col-sm-6">
-				<a href="#" data-lightbox="img/2.jpg" data-gallery-id="gallery-1" data-caption="Création d'un site web pour photographes" data-frame="snapshot-lb"><img src="img/2.jpg" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour photographes" /></a>
+				<a href="#" data-lightbox="img/2_resize.jpg" data-gallery-id="gallery-1" data-caption="Création d'un site web pour photographes" data-frame="snapshot-lb"><img src="img/2_resize.jpg" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour photographes" /></a>
 				<h3 class="mg-md text-center">
 					Création d'un site web pour photographes
 				</h3>
@@ -181,7 +180,7 @@
 		</div>
 		<div class="row tight-width-whitespace portfolio-row">
 			<div class="col-sm-6">
-				<a href="#" data-lightbox="img/3.bmp" data-gallery-id="gallery-1" data-caption="Création d'un site internet pour un voyageur" data-frame="snapshot-lb"><img src="img/3.bmp" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour voyageur"/></a>
+				<a href="#" data-lightbox="img/3_resize.jpg" data-gallery-id="gallery-1" data-caption="Création d'un site internet pour un voyageur" data-frame="snapshot-lb"><img src="img/3_resize.jpg" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour voyageur"/></a>
 				<h3 class="mg-md text-center">
 					Création d'un site internet pour un voyageur
 				</h3>
@@ -190,7 +189,7 @@
 				</p>
 			</div>
 			<div class="col-sm-6">
-				<a href="#" data-lightbox="img/4.bmp" data-gallery-id="gallery-1" data-caption="Conception d'un site pour une agence de mariage" data-frame="snapshot-lb"><img src="img/4.bmp" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour agence de mariage" /></a>
+				<a href="#" data-lightbox="img/4_resize.jpg" data-gallery-id="gallery-1" data-caption="Conception d'un site pour une agence de mariage" data-frame="snapshot-lb"><img src="img/4_resize.jpg" class="img-responsive portfolio-thumb" alt="paris web design logo agence web meilleure agence, Création d'un site web pour agence de mariage" /></a>
 				<h3 class="mg-md text-center">
 					Conception d'un site pour une agence de mariage
 				</h3>
@@ -266,7 +265,7 @@
 							<li><a href="annuaireseo.com">annuaireseo.com</a></li>
 							<li><a href="annuairemarketing.com">annuairemarketing.com</a></li>
 							<li><a href="123seoture.com">123seo.com</a></li>
-							<li><a href="123site.com">123site.com</a></li>
+							<li><a href="123site.com" class="focused">123site.com</a></li>
 							<li><a href="annuairewordpress.com">annuairewordpress.com</a></li>
 							<li><a href="listeagence.com">listeagence.com</a></li>
 							<li><a href="meilleuresagencesparis.com">meilleuresagencesparis.com</a></li>

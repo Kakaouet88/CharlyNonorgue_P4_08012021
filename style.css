@@ -13,10 +13,55 @@ button {
     outline: none!important;
 }
 
+.disabled{
+    color: rgb(117, 117, 117);
+    font-weight: 600;
+    border-bottom: rgb(117, 117, 117) solid 2px;
+}
+
+:focus, button:focus{
+    border-radius: 7px;
+    border: 1px black dashed;
+    padding: 3px;
+}
+
+.padding15{
+    padding: 13.5px;
+}
+
+h2{
+    margin-bottom: 6vh;
+}
+
+h2 + p{
+    font-size: 1.2em;
+}
+
+h3 + p{
+    text-align: center;
+    font-size: 1.2em;
+}
+
 a:hover {
     text-decoration: none;
     cursor: pointer;
 }
+
+.quote{
+    margin: 0 12vw 0 12vw;
+    color: rgb(133, 133, 133);
+    text-align: justify;
+    font-size: 1.1em;
+}
+
+blockquote{
+    font-size: 1.1em;
+}
+
+figcaption{
+    margin: 0 0 0 20px;
+}
+
 
 #page-loading-blocs-notifaction {
     position: fixed;
@@ -676,10 +721,6 @@ a {
     margin: auto auto auto auto;
 }
 
-p {
-    font-size: 11px;
-}
-
 .tight-width-whitespace {
     max-width: 600px;
     margin: auto auto auto auto;
@@ -701,12 +742,27 @@ p {
 
 .social {
     max-width: 400px;
+    height: 100px;
     margin: auto auto auto auto;
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 1.8em;
     line-height: 1.4em;
+    font-weight: 500;
+}
+
+#orangeh2{
+    font-size: 1.6em;
+}
+
+#orangeh2 + p{
+    font-size: 1.3em;
+}
+
+.navbar-1 a{
+    color: black;
+    font-weight: 500;
 }
 
 h3 {
@@ -753,8 +809,12 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgb(116, 116, 116);
     padding: 40px 40px 40px 40px;
+}
+
+.shadow-custom{
+    box-shadow: rgb(90, 90, 90) 0 10px 30px 3px;
 }
 
 .bold-link {
@@ -810,19 +870,19 @@ h4 {
 }
 
 .bg-dots-bg {
-    background-image: url("img/dots-bg.png");
+    background-image: url("img/dots-bg_resize.png");
 }
 
 .bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
+    background-image: url("img/lines-h2-bg_resize.png");
 }
 
 .bg-banniere {
-    background-image: url("img/la-chouette-agence-banniere.jpg");
+    background-image: url("img/la-chouette-agence-banniere_resize.jpg");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation_resize.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -954,12 +1014,6 @@ h4 {
     .hero-nav {
         left: -1px;
         right: -1px;
-    }
-    .navbar-collapse {
-        padding: 0;
-        overflow-x: hidden;
-        -webkit-box-shadow: none;
-        box-shadow: none;
     }
     .navbar-brand img {
         max-height: 40px;
