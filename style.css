@@ -13,6 +13,19 @@ button {
     outline: none!important;
 }
 
+footer > a{
+    color: black;
+}
+
+.fa{
+    color: black;
+}
+
+.txt-bigger{
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
 .disabled{
     color: rgb(117, 117, 117);
     font-weight: 600;
@@ -49,7 +62,7 @@ a:hover {
 
 .quote{
     margin: 0 12vw 0 12vw;
-    color: rgb(133, 133, 133);
+    color: rgb(88, 88, 88);
     text-align: justify;
     font-size: 1.1em;
 }
@@ -133,6 +146,7 @@ figcaption{
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 0;
 }
 
 .texture-paper::before{
@@ -151,7 +165,7 @@ figcaption{
 }
 
 .d-bloc {
-    color: rgba(255, 255, 255, .7);
+    color: rgb(0, 0, 0);
 }
 
 .d-bloc button:hover {
@@ -184,7 +198,7 @@ figcaption{
 .d-bloc h5 a,
 .d-bloc h6 a,
 .d-bloc p a {
-    color: rgba(255, 255, 255, .6);
+    color: rgba(0, 0, 0);
 }
 
 .d-bloc .a-btn:hover,
@@ -201,7 +215,7 @@ figcaption{
 .d-bloc h5 a:hover,
 .d-bloc h6 a:hover,
 .d-bloc p a:hover {
-    color: rgba(255, 255, 255, 1);
+    transform: scale(1.2);
 }
 
 .d-bloc .navbar-toggle .icon-bar {
@@ -228,14 +242,6 @@ figcaption{
 
 .d-bloc .panel .divider-h span {
     border-color: rgba(0, 0, 0, .1);
-}
-
-.d-bloc .panel .a-btn {
-    color: rgba(0, 0, 0, .6);
-}
-
-.d-bloc .panel .a-btn:hover {
-    color: rgba(0, 0, 0, 1);
 }
 
 .d-bloc .panel .btn-wire,
@@ -267,8 +273,6 @@ figcaption{
     border-color: rgba(0, 0, 0, .1);
 }
 
-.d-bloc .panel .a-btn,
-.l-bloc .a-btn,
 .l-bloc .navbar a,
 .l-bloc .navbar-brand,
 .l-bloc a .icon-sm,
@@ -702,7 +706,7 @@ label,
 a {
     font-family: "helvetica";
     font-weight: 400;
-    color: #575757!important;
+    color: #000000!important;
 }
 
 .container {
@@ -748,9 +752,9 @@ a {
 
 .social {
     max-width: 400px;
-    height: 100px;
-    margin: auto auto auto auto;
+    margin: 20px auto 50px auto;
 }
+
 
 h2 {
     font-size: 1.8em;
@@ -815,7 +819,7 @@ h4 {
 }
 
 .black-background {
-    background-color: rgb(116, 116, 116);
+    background-color: rgb(59, 59, 59);
     padding: 40px 40px 40px 40px;
 }
 
@@ -845,13 +849,17 @@ h4 {
 }
 
 .btn-atomic-tangerine {
-    background: #ffb08b;
-    color: #FFFFFF!important;
+    background: #F3976C;
+    color: #000000!important;
 }
 
-.btn-atomic-tangerine:hover {
-    background: #c27956!important;
-    color: #FFFFFF!important;
+.btn-atomic-tangerine:hover, .btn-atomic-tangerine:focus {
+    background: #ffac86!important;
+    transform: scale(1.07);
+}
+
+.btn-atomic-tangerine:focus{
+    border: 1.5px black dashed;
 }
 
 .ltc-white {
