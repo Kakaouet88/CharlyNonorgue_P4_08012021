@@ -150,12 +150,12 @@ figcaption{
 }
 
 .texture-paper::before{
-    background: url("img/texture-paper.png");
+    background: url("img/texture-paper.png" defer);
     background-size: 280px 280px;
 }
 
 .texture-paperz{
-    background: url("img/texture-paper.png");
+    background: url("img/texture-paper.png" defer);
     background-size: 280px 280px;
     padding: 100px 0px 100px 0px;
 }
