@@ -17,8 +17,47 @@ footer > a{
     color: black;
 }
 
+.coordonnées a{
+    text-decoration: underline;
+}
+
+input:not(:focus):invalid, textarea:not(:focus):invalid{
+    background-color: rgba(255, 194, 144, 0.253);
+    outline: thick double rgba(255, 194, 144, 0.623);
+}
+
+:valid{
+    background-color: rgba(125, 255, 125, 0.253);
+}
+
+
+
+.coordonnées{
+    font-size: 1.1em;
+}
+
+.formtitle p{
+    font-size: 1.2em;
+}
+
 .fa{
     color: black;
+}
+
+.form{
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.formtitle{
+    margin: 0px auto 9vh auto;
+}
+
+.coordonnées{
+    margin: 70px auto 0px auto;
+    text-align: center;
 }
 
 .txt-bigger{
@@ -32,10 +71,14 @@ footer > a{
     border-bottom: rgb(117, 117, 117) solid 2px;
 }
 
-:focus, button:focus{
+:focus{
     border-radius: 7px;
     border: 1px black dashed;
-    padding: 3px;
+    transform: scale(1.1);
+}
+
+button:focus, input:focus, textarea:focus{
+    transform: scale(1.05);
 }
 
 .padding15{
@@ -752,9 +795,12 @@ a {
 
 .social {
     max-width: 400px;
-    margin: 20px auto 50px auto;
+    margin: 20px auto 10px auto;
 }
 
+.d-bloc a:focus .icon-md{
+    transform: scale(1.2);
+}
 
 h2 {
     font-size: 1.8em;
@@ -779,7 +825,7 @@ h3 {
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #333333!important;
+    color: #000000!important;
 }
 
 .med-width-whitespace {
@@ -789,11 +835,11 @@ h3 {
 }
 
 h1 {
-    color: #333333!important;
+    color: #000000!important;
 }
 
 h4 {
-    color: #333333!important;
+    color: #000000!important;
 }
 
 .icons {

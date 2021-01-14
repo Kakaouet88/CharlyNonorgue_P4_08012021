@@ -3,52 +3,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="description" content="La Chouette Agence est une entreprise de webdesign basée à Lyon. Elle aide les entreprises à améliorer leur visibilité et leur attractivité sur internet. Elle réalise des site web pour une large variété de profils. N'hésitez pas à prendre contact avec nous dès maintenant pour votre projet de webdesign pour votre entreprise.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="shortcut icon" type="image/png" href="favicon_resize.png">
-    
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css" media="all">
-	<link rel="stylesheet" type="text/css" href="style.css" media="all">
-	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css" media="all" defer>
-	<link rel="stylesheet" type="text/css" href="./css/et-line.min.css" media="all" defer>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	
-	<link rel="preload" href="/fonts/fontawesome-webfont.woff2" as="font">
-	<link rel="preload" href="/fonts/et-line.woff" as="font">
+	<link rel="shortcut icon" type="image/png" href="favicon_resize.png">
+	
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css" media="all">
+	<link rel="stylesheet" type="text/css" href="style.css" media="all">
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.css" media="all">
+	<link rel="stylesheet" type="text/css" href="./css/et-line.css" media="all">
 
-	<script src="./js/jquery-2.1.0.min.js" defer></script>
-	<script src="./js/bootstrap.min.js" defer></script>
-	<script src="./js/blocs.min.js" defer></script>
-	<script src="./js/jqBootstrapValidation.js" defer></script>
-	<script src="./js/formHandler.js" defer></script>
+	<script src="./js/jquery-2.1.0.js"></script>
 
-    <title>Formulaire de contact - La Chouette Agence - Entreprise de Webdesign à Lyon</title>
-
-    
-<!-- Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZDRM48XW0B"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ZDRM48XW0B');
-</script>
-<!-- Analytics END -->
-    
+	<title>Formulaire de contact - La Chouette Agence - Entreprise de Webdesign à Lyon</title>
+	
 </head>
+
 <body>
 <!-- Principal conteneur -->
 <div class="page-container">
     
-<!-- bloc-0 -->
-<div class="bloc bgc-white l-bloc " id="bloc-0">
+<!-- HEADER -->
+<header class="bloc bgc-white l-bloc " id="bloc-0" role="banner">
 	<div class="container bloc-sm">
-		<nav class="navbar row">
+
+		<nav class="navbar row" role="navigation" aria-label="navigation">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html"><img src="img/la-chouette-agence.png" alt="paris web design logo agence web meilleure agence" height="40" /></a>
+				<a href="/index.html" title="Aller à la page d'accueil" role="link"><img src="img/la-chouette-agence_resize.png" alt="Logotitre La Chouette Agence Webdesign Lyon" height="40"/></a>
 			</div>
 			<div class="collapse navbar-collapse navbar-1 special-dropdown-nav">
 				<ul class="site-navigation nav navbar-nav">
-					<li class="focused"><a href="index.html">Accueil</a>
+					<li class="focused"><a href="index.html" title="Aller à la page d'accueil" role="link">Accueil</a>
 					</li>
 					<li class="focused disabled padding15" aria-label="page active">
 						Contact
@@ -57,115 +41,111 @@
 			</div>
 		</nav>
 	</div>
-</div>
-<!-- bloc-0 END -->
+</header>
+<!-- HEADER END -->
 
 <!-- bloc-6 -->
-<div class="bloc bg-dots-bg bg-repeat bgc-atomic-tangerine d-bloc bloc-bg-texture texture-paper" id="bloc-6">
+<div class="bloc bg-dots-bg bg-repeat bgc-atomic-tangerine d-bloc bloc-bg-texture texture-paper" id="bloc-6" aria-label="bloc décoratif">
 	<div class="container bloc-lg">
-		<div class="row">
-			<div class="col-sm-12">
-				<h1 class="text-center hero-bloc-text tc-white">
-					Parlons web design !
-				</h1>
-				<p class="text-center mg-lg tc-white tight-width-whitespace">
-					Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
-					Parlez-nous de votre projet en complétant le formulaire ci-dessous.
-				</p>
-			</div>
-		</div>
 	</div>
 </div>
 <!-- bloc-6 END -->
 
 <!-- bloc-7 -->
-<div class="bloc bgc-white l-bloc" id="bloc-7">
+<section class="bloc bgc-white l-bloc" id="bloc-7" role="region">
 	<div class="container bloc-lg">
-		<div class="row">
-			<div class="col-sm-6">
-				<form id="form_1" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+
+	<div class="formtitle">
+		<h1 class="text-center hero-bloc-text">
+			Parlons web design !
+		</h1>
+		<p class="text-center mg-lg tight-width-whitespace">
+			Nous sommes ravis que vous souhaitiez collaborer avec notre agence.<br>
+			Parlez-nous de votre projet en complétant le formulaire ci-dessous.
+		</p>
+	</div>
+			<div class="form">
+				<form id="Formulaire de contact projet" novalidate success-msg="Your message has been sent." fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!" action="/includes/form_1.php" method="POST" role="form">
 					<div class="form-group">
-						<label>
-							Nom
+						<label for="nom">
+							Nom/Entreprise
 						</label>
-						<input id="name" class="form-control" required />
+						<input id="nom" type="text" name="nom" class="form-control" required placeholder="Jon Appleseed" aria-label="entrez ici votre nom" minlength="5"/>
 					</div>
 					<div class="form-group">
-						<label>
+						<label for="email">
 							Adresse email
 						</label>
-						<input id="email" class="form-control" type="email" required />
+						<input id="email" name="email" class="form-control" type="email" required placeholder="jonappleseed@gmail.com" aria-label="entrez ici votre adresse email"/>
 					</div>
 					<div class="form-group">
-						<label>
+						<label for="connu">
 							Comment nous avez-vous connu ?
 						</label>
-						<input class="form-control" type="email" required id="input_504" />
+						<input class="form-control" type="text" required id="connu" placeholder="Twitter, Facebook, bouche à oreille..." aria-label="dites-nous ici comment vous nous avez connu" minlength="5"/>
 					</div>
 					<div class="form-group">
-						<label>
+						<label for="brief">
 							Brief de votre projet (Ajoutez autant de détails que nécessaire)<br>
-						</label><textarea id="message" class="form-control" rows="4" cols="50" required></textarea>
-					</div> 
-					<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit">
+						</label>
+						<textarea id="brief" class="form-control" type="text" rows="4" cols="50" required placeholder="Décrivez de manière détaillé votre projet..." aria-label="décrivez ici en détail votre projet" minlength="200"></textarea>
+					</div>
+					<button class="bloc-button btn btn-lg btn-block cta-hero btn-atomic-tangerine" type="submit" role="button">
 						Envoyer
 					</button>
 				</form>
 			</div>
-			<div class="col-sm-6">
+			<div class="coordonnées">
 				<p>
-					contact@lachouetteagence.com<br>2 place Sathonay 69001 Lyon<br>Ouvert de 9h à 18h, du lundi au vendredi<br>
+					<a href="mailto:contact@lachouetteagence.com" title="Cliquez ici pour nous envoyer un mail" role="link">Nous envoyer un mail</a><br>2 place Sathonay 69001 Lyon<br>Ouvert de 9h à 18h, du lundi au vendredi<br>
 				</p>
 			</div>
-		</div>
 	</div>
-</div>
+</section>
 <!-- bloc-7 END -->
 
-<!-- ScrollToTop Button -->
-<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1')"><span class="fa fa-chevron-up"></span></a>
-<!-- ScrollToTop Button END-->
-
-
 <!-- Footer - bloc-8 -->
-<div class="bloc bgc-atomic-tangerine d-bloc" id="bloc-8">
+<footer class="bloc bgc-atomic-tangerine d-bloc" id="bloc-8" role="contentinfo">
 	<div class="container bloc-sm">
 		<div class="row">
 			<div class="col-sm-12">
-				<p class="text-center white">
+				<p class="text-center txt-bigger">
 					La chouette agence - Agence web basée à Lyon.<br>
 				</p>
 				<div class="row row-no-gutters social">
 					<div class="col-sm-3">
 						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-twitter icon-md"></span></a>
+							<a class="social" rel="noopener noreferrer" target="_blank" href="https://twitter.com/home" title="Twitter La Chouette Agence"><span class="fa fa-twitter icon-md" role="link"></span><br>Twitter</a>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-facebook icon-md"></span></a>
+							<a class="social" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/" title="Facebook La Chouette Agence"><span class="fa fa-facebook icon-md" role="link"></span><br>Facebook</a>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-dribbble icon-md"></span></a>
+							<a class="social" rel="noopener noreferrer" target="_blank" title="Dribbble La Chouette Agence" href="https://dribbble.com/" role="link"><span class="fa fa-dribbble icon-md"></span><br>Dribbble</a>
 						</div>
 					</div>
 					<div class="col-sm-3">
 						<div class="text-center">
-							<a class="social" href="index.html"><span class="fa fa-instagram icon-md"></span></a>
+							<a class="social" rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/" title="Instagram La Chouette Agence"><span class="fa fa-instagram icon-md" role="link"></span><br>Instagram</a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</footer>
 <!-- Footer - bloc-8 END -->
 
 </div>
 <!-- Principal conteneur END -->
-    
+<script src="./js/bootstrap.min.js"></script>
+<script src="./js/blocs.min.js"></script>
+<script src="./js/jqBootstrapValidation.js"></script>
+<script src="./js/formHandler.js"></script>
 
 </body>
 </html>
