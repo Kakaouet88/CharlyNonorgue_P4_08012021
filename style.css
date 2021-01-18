@@ -1158,13 +1158,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 768px){
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
     .bg-banniere {
-        background: url("img/la-chouette-agence-banniere_resize_mobile.jpg") no-repeat cover;
+        background: url("img/la-chouette-agence-banniere_resize_mobile.jpg");
     }
     
     .bg-presentation {
-        background: url("img/image-de-presentation_resize_mobile.jpg") no-repeat cover;
+        background: url("img/image-de-presentation_resize_mobile.jpg");
     }
 
     .texture-paper::before{
